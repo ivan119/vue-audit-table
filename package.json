@@ -1,6 +1,6 @@
 {
   "name": "vue-audit-table",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A lightweight Vue 3 component for displaying audit trail differences between old and new values with a clean, color-coded table interface",
   "keywords": [
     "vue",
@@ -25,7 +25,9 @@
     },
     "./style.css": "./dist/style.css"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
