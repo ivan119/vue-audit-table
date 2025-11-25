@@ -1,0 +1,45 @@
+{
+  "name": "vue-audit-table",
+  "version": "0.1.0",
+  "description": "A lightweight Vue 3 component for displaying audit trail differences between old and new values with a clean, color-coded table interface",
+  "keywords": [
+    "vue",
+    "vue3",
+    "nuxt",
+    "nuxt3",
+    "nuxt4",
+    "audit",
+    "diff",
+    "change-tracking",
+    "json-diff",
+    "audit-log",
+    "audit-table"
+  ],
+  "author": "Ivan Kelava[](https://github.com/ivan119)",
+  "main": "./dist/audit-table.umd.js",
+  "module": "./dist/audit-table.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/audit-table.es.js",
+      "require": "./dist/audit-table.umd.js"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "vue": "^3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/tsconfig": "^0.8.1",
+    "typescript": "~5.9.3",
+    "vite": "^7.2.4",
+    "vue-tsc": "^3.1.4"
+  }
+}

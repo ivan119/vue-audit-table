@@ -1,0 +1,20 @@
+.audit-table table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 13px;
+    margin: 4px 0;
+}
+.audit-table td {
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    vertical-align: top;
+}
+.audit-table td.label {
+    width: 1%;
+    white-space: nowrap;
+    font-weight: 600;
+}
+.audit-table td.unchanged { background: #fff; }
+.audit-table td.old { background: #ffd6d6; }
+.audit-table td.new { background: #d4edda; }
+.audit-table table table { margin: 4px 0; }
