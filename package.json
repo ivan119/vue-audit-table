@@ -16,6 +16,15 @@
     "audit-table"
   ],
   "author": "Ivan Kelava[](https://github.com/ivan119)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivan119/vue-audit-table.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ivan119/vue-audit-table/issues"
+  },
+  "homepage": "https://github.com/ivan119/vue-audit-table#readme",
   "main": "./dist/audit-table.umd.js",
   "module": "./dist/audit-table.es.js",
   "exports": {
