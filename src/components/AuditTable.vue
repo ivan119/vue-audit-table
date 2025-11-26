@@ -134,20 +134,7 @@ function diffHtml(v1: string, v2: string): string {
     return items
   }
 
-  const esc = (v: any) =>
-      v == null
-          ? ""
-          : String(v).replace(/[&<>"']/g, c =>
-              (
-                  {
-                    "&": "&amp;",
-                    "<": "&lt;",
-                    ">": "&gt;",
-                    '"': "&quot;",
-                    "'": "&#039;",
-                  } as Record<string, string>
-              )[c]
-          )
+  const esc = (v: any) => v == null ? '' : String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]!))
 
   /* ---------------------- ROW ---------------------- */
   const row = (cls: string, label: string | null, val: string) => {
