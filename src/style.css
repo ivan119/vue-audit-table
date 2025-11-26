@@ -6,7 +6,7 @@
 }
 .audit-table td {
     padding: 4px 8px;
-    border: 1px solid #ccc;
+    border: 1px solid;
     vertical-align: top;
 }
 .audit-table td.label {
@@ -14,7 +14,4 @@
     white-space: nowrap;
     font-weight: 600;
 }
-.audit-table td.unchanged { background: #fff; }
-.audit-table td.old { background: #ffd6d6; }
-.audit-table td.new { background: #d4edda; }
 .audit-table table table { margin: 4px 0; }
