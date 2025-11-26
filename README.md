@@ -4,11 +4,13 @@ A lightweight Vue 3 component for displaying audit trail differences between old
 
 ## Features
 
-- 🎨 Clean, color-coded diff visualization (red for deletions, green for additions)
+- 🎨 Clean, color-coded diff visualization
 - 🔍 Deep object comparison with nested structure support
 - 📦 Lightweight with zero dependencies (except Vue 3)
 - 🎯 TypeScript support
-- ⚡ Works with Vue 3, Nuxt 3, and Vite projects
+- ⚡ Works with Vue 3, Nuxt 3, Nuxt 4, and Vite projects
+- 🔄 Fully reactive: updates automatically on prop changes
+- 🖌️ Customizable colors, border, and text
 
 ## Installation
 ```bash
@@ -42,16 +44,28 @@ npm install vue-audit-table
 </script>
 
 <template>
-  <AuditTable :old-value="oldValue" :new-value="newValue" />
+  <AuditTable
+      :old-value="oldValue"
+      :new-value="newValue"
+      old-value-color="#ffd6d6"
+      new-value-color="#d4edda"
+      unchanged-value-color="#ffffff"
+      border-color="#ccc"
+      text-color="#000"
+  />
 </template>
 ```
 
 ## Props
-
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `oldValue` | `Record<string, any>` \| `Array<any>` | `{}` | The original object or array before changes |
-| `newValue` | `Record<string, any>` \| `Array<any>` | `{}` | The updated object or array after changes |
+| Prop                  | Type                                 | Default   | Description                                 |
+| --------------------- | ------------------------------------ | --------- | ------------------------------------------- |
+| `oldValue`            | `Record<string, any>` | `Array<any>` | `{}`      | The original object or array before changes |
+| `newValue`            | `Record<string, any>` | `Array<any>` | `{}`      | The updated object or array after changes   |
+| `oldValueColor`       | `string`                             | `#ffd6d6` | Background color for old/deleted values     |
+| `newValueColor`       | `string`                             | `#d4edda` | Background color for new/added values       |
+| `unchangedValueColor` | `string`                             | `#ffffff` | Background color for unchanged values       |
+| `borderColor`         | `string`                             | `#ccc`    | Border color for all table cells            |
+| `textColor`           | `string`                             | `#000`    | Text color for all table cells              |
 
 ## Color Legend
 
